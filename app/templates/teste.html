@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teste</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #f2f2f2;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #202020;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .base {
+            border-radius: 25px;
+            width: 70%;
+            height: auto;
+
+            margin-top: 50px;
+            margin-right:auto;
+            margin-left:auto;
+            background-color: rgb(59, 59, 59);
+
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-right: 40px;
+            padding-left: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        footer{
+            margin-top: 20px;
+            font-size: 16px;
+            color: #f2f2f2;
+            width: 100%;
+            height: 2.5rem; 
+            background-color: #202020;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .slidecontainer {
+            margin: auto;
+            width: 75%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 25px;
+            background: #202020;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 25px;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 40px;
+            height: 25px;
+            background: #04AA6D;
+            cursor: pointer;
+        }
+
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
+        h4{
+            text-align: center;
+        }
+
+        p {
+            margin: 4px
+        }
+
+        div.body-content{
+            /** Essa margem vai evitar que o conteudo fique por baixo do rodapé **/
+            margin-bottom: 100px;
+        }
+        .button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 25px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  
+<body>
+    <div class="body-content">
+    <div class="topnav">
+        <a  href="/">Home</a>
+        <a class="active" href="teste">Teste</a>
+    </div>
+
+    <div class="base">
+        <div style="padding-left:16px">
+            <h2>Teste Cinco Grandes Personalidades</h2>
+            <br>
+            <form method="POST" action="/resultado" id="myForm">
+                <div class="slidecontainer">
+                    <h4>Eu sou o centro das atenções em festas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT1">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu não falo muito</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT2">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Sinto-me confortável perto das pessoas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT3">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu prefiro ser discreto e me manter em segundo plano</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT4">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu começo conversas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT5">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Tenho pouco a dizer</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT6">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu converso com muitas pessoas diferentes em festas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT7">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Não gosto de chamar atenção para mim</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT8">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Não me importo de ser o centro das atenções</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT9">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Fico quieto perto de estranhos</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EXT10">
+                </div>
+                
+                <br>
+                <br>
+
+                <div class="slidecontainer">
+                    <h4>Eu fico estressado facilmente</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST1">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Estou relaxado a maior parte do tempo</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST2">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu me preocupo com as coisas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST3">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Raramente me sinto triste</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST4">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu sou facilmente perturbado</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST5">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu fico chateado facilmente</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST6">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu mudo muito meu humor</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST7">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Tenho mudanças de humor frequentes</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST8">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu fico irritado facilmente</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST9">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Muitas vezes me sinto triste</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="EST10">
+                </div>
+                
+                <br>
+                <br>
+
+                <div class="slidecontainer">
+                    <h4>Sinto pouca preocupação pelos outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR1">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Sou interessado pelas pessoas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR2">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu insulto as pessoas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR3">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Simpatizo com os sentimentos dos outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR4">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Não estou interessado nos problemas dos outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR5">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu tenho um coração mole</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR6">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu não estou realmente interessado nos outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR7">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu reservo um tempo para os outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR8">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu sinto as emoções dos outros</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR9">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu faço as pessoas se sentirem à vontade</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="AGR10">
+                </div>
+
+                <br>
+                <br>
+
+                <div class="slidecontainer">
+                    <h4>Estou sempre preparado</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN1">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Deixo meus pertences por aí</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN2">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Presto atenção aos detalhes</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN3">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu faço uma bagunça nas coisas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN4">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu faço as tarefas imediatamente</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN5">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Muitas vezes esqueço-me de colocar as coisas no seu devido lugar</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN6">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu gosto de ordem</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN7">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu me esquivo dos meus deveres</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN8">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu sigo um cronograma</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN9">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Sou exigente no meu trabalho</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="CSN10">
+                </div>
+
+                <br>
+                <br>
+
+                <div class="slidecontainer">
+                    <h4>Eu tenho um vocabulário rico</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN1">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Tenho dificuldade em entender ideias abstratas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN2">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu tenho uma imaginação fértil</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN3">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Não estou interessado em ideias abstratas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN4">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Tenho ideias excelentes</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN5">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu não tenho uma boa imaginação</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN6">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu sou rápido para entender as coisas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN7">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu uso palavras difíceis</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN8">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer">
+                    <h4>Eu passo tempo refletindo sobre as coisas</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN9">
+                </div>
+                <br>
+                <br>
+                <div class="slidecontainer" style="margin-bottom:50px">
+                    <h4>Estou cheio de ideias</h4>
+                    <p style="float: left;">Discordo</p>
+                    <p style="float: right;">Concordo</p>
+                    <div style="clear: both;"></div>
+                    <input type="range" min="1" max="5" value="3" class="slider" name="OPN10">
+                </div>
+
+                <input type="submit" value="Concluir" class="button" style="float: right;" required>
+                <div style="clear: both;"></div>
+            </form>
+            <p id="responseMessage"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Esta é uma página para estudos acadêmicos</p>
+    </footer>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+
+            // Converte os dados do formulário para um objeto JSON
+            const jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            // Envia os dados para a API REST
+            fetch('http://127.0.0.1:5000/resultado', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                var result = JSON.stringify(data);
+                var x = JSON.parse(result);
+
+                switch (x.personality) {
+                    case "0":
+                        window.location.replace("http://127.0.0.1:5000/0");
+                        break;
+                    case "1":
+                        window.location.replace("http://127.0.0.1:5000/1");
+                        break;
+                    case "2":
+                        window.location.replace("http://127.0.0.1:5000/2");
+                        break;
+                    case "3":
+                        window.location.replace("http://127.0.0.1:5000/3");
+                        break;
+                    case "4":
+                        window.location.replace("http://127.0.0.1:5000/4");
+                        break;
+                }
+            })
+            .catch(error => {
+                document.getElementById("responseMessage").textContent = "Erro: " + error.message;
+            });
+        });
+    </script>
+  </body>
+</html>
