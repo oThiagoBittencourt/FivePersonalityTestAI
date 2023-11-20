@@ -10,6 +10,7 @@ Projeto acadêmico que visa desenvolver, através do uso de `IA(Scikit-Learn)`, 
 <!--ts-->
    * [Data Set e Funcionamento](#data-set-e-funcionamento)
    * [Detalhes](#detalhes)
+   * [Funcionalidade](#funcionalidade)
    * [Front-End e API](#front-end-e-api)
 <!--te-->
 
